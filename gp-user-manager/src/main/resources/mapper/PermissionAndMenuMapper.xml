@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gp.user_manager.user.dao.PermissionAndMenuMapper">
+    <select id="findPermissionAndMenuList" parameterType="com.gp.framework.domain.user.request.PermissionRequest"
+            resultType="com.gp.framework.domain.user.ext.PermissionAndMenu">
+        SELECT
+        a.id,
+        b.`code`,
+        b.menu_name menuName,
+        a.create_time createTime
+        FROM
+        permission a
+        LEFT JOIN menu b ON a.menu_id = b.id
+        WHERE
+        a.role_id = '5'
+        <if test="menuName != null">
+                AND b.menu_name LIKE concat('%',#{menuName},'%')
+        </if>
+    </select>
+</mapper>

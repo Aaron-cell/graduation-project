@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/F2FPay_Demo_Java/TradePayDemo/TradePayDemo.iml" filepath="$PROJECT_DIR$/F2FPay_Demo_Java/TradePayDemo/TradePayDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/F2FPay_Demo_Java/TradePaySDK/TradePaySDK.iml" filepath="$PROJECT_DIR$/F2FPay_Demo_Java/TradePaySDK/TradePaySDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gp-center-eureka/gp-center-eureka.iml" filepath="$PROJECT_DIR$/gp-center-eureka/gp-center-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gp-cms-manager/gp-cms-manager.iml" filepath="$PROJECT_DIR$/gp-cms-manager/gp-cms-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gp-fileSystem-manager/gp-fileSystem-manager.iml" filepath="$PROJECT_DIR$/gp-fileSystem-manager/gp-fileSystem-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gp-framework-api/gp-framework-api.iml" filepath="$PROJECT_DIR$/gp-framework-api/gp-framework-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gp-framework-common/gp-framework-common.iml" filepath="$PROJECT_DIR$/gp-framework-common/gp-framework-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gp-framework-model/gp-framework-model.iml" filepath="$PROJECT_DIR$/gp-framework-model/gp-framework-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gp-framework-parent/gp-framework-parent.iml" filepath="$PROJECT_DIR$/gp-framework-parent/gp-framework-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gp-framework-utils/gp-framework-utils.iml" filepath="$PROJECT_DIR$/gp-framework-utils/gp-framework-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gp-resources-manager/gp-resources-manager.iml" filepath="$PROJECT_DIR$/gp-resources-manager/gp-resources-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gp-security-oauth2/gp-security-oauth2.iml" filepath="$PROJECT_DIR$/gp-security-oauth2/gp-security-oauth2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gp-user-manager/gp-user-manager.iml" filepath="$PROJECT_DIR$/gp-user-manager/gp-user-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gp_rabbitmq_manager/gp_rabbitmq_manager.iml" filepath="$PROJECT_DIR$/gp_rabbitmq_manager/gp_rabbitmq_manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/graduation-project.iml" filepath="$PROJECT_DIR$/.idea/graduation-project.iml" />
+    </modules>
+  </component>
+</project>

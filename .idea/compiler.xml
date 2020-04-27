@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="gp-framework-model" />
+        <module name="gp-security-oauth2" />
+        <module name="gp-cms-manager" />
+        <module name="gp-framework-common" />
+        <module name="gp-fileSystem-manager" />
+        <module name="gp-resources-manager" />
+        <module name="gp-user-manager" />
+        <module name="gp-framework-utils" />
+        <module name="gp-center-eureka" />
+        <module name="gp-framework-api" />
+        <module name="gp_rabbitmq_manager" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="gp-center-eureka" target="1.8" />
+      <module name="gp-cms-manager" target="1.8" />
+      <module name="gp-fileSystem-manager" target="1.8" />
+      <module name="gp-framework-api" target="1.8" />
+      <module name="gp-framework-common" target="1.8" />
+      <module name="gp-framework-model" target="1.8" />
+      <module name="gp-framework-parent" target="1.8" />
+      <module name="gp-framework-utils" target="1.8" />
+      <module name="gp-resources-manager" target="1.8" />
+      <module name="gp-security-oauth2" target="1.8" />
+      <module name="gp-user-manager" target="1.8" />
+      <module name="gp_rabbitmq_manager" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="gp-center-eureka" options="-parameters" />
+      <module name="gp-cms-manager" options="-parameters" />
+      <module name="gp-fileSystem-manager" options="-parameters" />
+      <module name="gp-framework-api" options="-parameters" />
+      <module name="gp-framework-common" options="-parameters" />
+      <module name="gp-framework-model" options="-parameters" />
+      <module name="gp-framework-parent" options="" />
+      <module name="gp-framework-utils" options="-parameters" />
+      <module name="gp-resources-manager" options="-parameters" />
+      <module name="gp-security-oauth2" options="-parameters" />
+      <module name="gp-user-manager" options="-parameters" />
+      <module name="gp_rabbitmq_manager" options="-parameters" />
+    </option>
+  </component>
+</project>

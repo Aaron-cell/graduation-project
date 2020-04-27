@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gp.user_manager.user.dao.UserAndRoleMapper">
+    <select id="findUserAndRoleList" parameterType="com.gp.framework.domain.user.request.QueryUserAndRoleRequest"
+            resultType="com.gp.framework.domain.user.ext.UserList">
+        SELECT
+            a.id,
+            a.username,
+            a.`name`,
+            a.sex,
+            a.userpic,
+            a.email,
+            a.phone,
+            a.qq,
+            a.create_time createtime,
+            a.update_time updatetime,
+            b.creator,
+            c.role_name rolename
+        FROM
+            `user` a
+        LEFT JOIN user_role b ON a.id = b.user_id
+        LEFT JOIN role c ON b.role_id = c.id
+        <if test="roleId != null">
+            WHERE  c.id = #{roleId}
+            <if test="username != null">
+                AND a.username LIKE concat('%',#{username},'%')
+            </if>
+        </if>
+        <if test="roleId == null">
+            <if test="username != null">
+                WHERE a.username LIKE concat('%',#{username},'%')
+            </if>
+        </if>
+    </select>
+</mapper>

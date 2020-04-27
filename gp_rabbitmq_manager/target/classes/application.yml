@@ -1,0 +1,57 @@
+server:
+  port: 20500
+spring:
+  application:
+    name: gp-rabbitmq-manager
+  #邮箱配置
+  mail:
+    username: 1464889572@qq.com
+    password: dxboshxaqfggbaed #授权码
+    host: smtp.qq.com
+    #开启安全连接
+    properties:
+      mail:
+        stmp:
+          ssl:
+            enble: true
+  #mongo配置
+  data:
+    mongodb:
+      database: gp_cms
+      uri: mongodb://root:123456@127.0.0.1:27017
+  rabbitmq:
+    host: 192.168.56.101
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+  datasource:
+    druid:
+      url: ${MYSQL_URL:jdbc:mysql://localhost:3306/gp_resource?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8}
+      username: root
+      password: 123456
+      driverClassName: com.mysql.jdbc.Driver
+      initialSize: 5  #初始建立连接数量
+      minIdle: 5  #最小连接数量
+      maxActive: 20 #最大连接数量
+      maxWait: 10000  #获取连接最大等待时间，毫秒
+      testOnBorrow: true #申请连接时检测连接是否有效
+      testOnReturn: false #归还连接时检测连接是否有效
+      timeBetweenEvictionRunsMillis: 60000 #配置间隔检测连接是否有效的时间（单位是毫秒）
+      minEvictableIdleTimeMillis: 300000  #连接在连接池的最小生存时间（毫秒）
+pagehelper:
+  helper-dialect: mysql
+gp:
+  mq:
+    sms_queue_reset: sms_queue_reset #重置密码发送验证码队列
+    sms_routing_reset: sms_routing_reset
+    sms_queue_password: sms_queue_password #重置密码后发送密码队列
+    sms_routing_password: sms_routing_password
+    email_queue_birth: email_queue_birth
+    email_routing_birth: email_routing_birth
+birthTemplet:
+  id : 5e7e055bc816240f4c897f73
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml #指定mapper映射文件路径
+  configuration:
+    map-underscore-to-camel-case: true #开启驼峰命名法
