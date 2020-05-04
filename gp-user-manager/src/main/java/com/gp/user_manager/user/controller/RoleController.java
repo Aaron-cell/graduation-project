@@ -5,6 +5,7 @@ import com.gp.framework.domain.user.Role;
 import com.gp.framework.model.response.QueryResponseResult;
 import com.gp.user_manager.user.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,6 +25,7 @@ public class RoleController implements RoleControllerApi {
     private RoleService roleService;
 
     @Override
+    @PreAuthorize("hasAuthority('gp_role_list')")
     @GetMapping("/list")
     public QueryResponseResult<Role> getRoleList() {
         return roleService.getRoleList();

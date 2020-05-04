@@ -21,6 +21,8 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @author 码农界的小学生
@@ -93,5 +95,47 @@ public class SmsService {
         String jsonString = JSON.toJSONString(map);
         rabbitTemplate.convertAndSend(RabbitmqConfig.GP_ROUTING_CMS_EXCHANGE,sms_routing_password,jsonString);
         return new ResponseResult(UserCode.PASSWORD_SEND_SUCCESS);
+    }
+
+    /**
+     * 查询号码是否被使用，否则发送验证码
+     * @param phone
+     * @return
+     */
+    public ResponseResult verifyPhone(String phone,String code) {
+        if(StringUtils.isEmpty(phone)){
+            ExceptionCast.cast(CommonCode.INVALID_PARAM);
+        }
+//        //验证是否是数字
+//        boolean numeric = this.isNumeric(phone);
+//        if(!numeric){
+//            ExceptionCast.cast(UserCode.PHONE_IS_NUMBER);
+//        }
+        User user = userRepository.findByPhone(phone);
+        if(user != null){
+            return new ResponseResult(UserCode.NUMBER_FOUND);
+        }
+        //向cookie存放验证码
+        this.saveCookie(phone,code);
+        //向mq发送消息
+        HashMap<String, String> map = new HashMap<>();
+        map.put("phone",phone);
+        map.put("code",code);
+        String jsonString = JSON.toJSONString(map);
+        rabbitTemplate.convertAndSend(RabbitmqConfig.GP_ROUTING_CMS_EXCHANGE,sms_routing_reset,jsonString);
+        return new ResponseResult(UserCode.MESSAGE_SEND_SUCCESS);
+    }
+    /**
+     * 利用正则表达式判断字符串是否是数字
+     * @param str
+     * @return
+     */
+    public boolean isNumeric(String str){
+        Pattern pattern = Pattern.compile("[0-9]*");
+        Matcher isNum = pattern.matcher(str);
+        if( !isNum.matches() ){
+            return false;
+        }
+        return true;
     }
 }

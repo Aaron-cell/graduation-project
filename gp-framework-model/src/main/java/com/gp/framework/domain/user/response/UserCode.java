@@ -19,10 +19,13 @@ public enum UserCode implements ResultCode {
     REGISTER_SUCCESS(true,19999,"注册成功"),
     TIMEFORMAT_ERROR(false,20003,"时间格式错误！"),
     NUMBER_NOT_FOUND(false,20004,"该号码未被绑定"),
+    NUMBER_FOUND(false,20009,"该号码已被绑定"),
+    PHONE_IS_NUMBER(false,20010,"号码必须为数字"),
+    ORIGINAL_PASSWORD_ERROR(false,20011,"原始密码不正确！"),
     MESSAGE_SEND_SUCCESS(true,20005,"验证码已发送"),
     CODE_FAILURE(false,20006,"验证码失效！请重新验证"),
     CODE_ERROR(false,20007,"验证码错误"),
-    PASSWORD_SEND_SUCCESS(false,20008,"重置密码已发送到手机");
+    PASSWORD_SEND_SUCCESS(true,20008,"重置密码已发送到手机");
     //是否操作成功
     boolean success;
     //操作代码

@@ -6,6 +6,7 @@ import com.gp.framework.model.response.QueryResponseResult;
 import com.gp.framework.model.response.ResponseResult;
 import com.gp.resources_manager.resources.supplier.service.SupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -23,12 +24,14 @@ public class SupplierController implements SupplierControllerApi {
     private SupplierService supplierService;
 
     @Override
+    @PreAuthorize("hasAuthority('gp_supplier_add')")
     @PostMapping("/addsupplier")
     public ResponseResult AddSupplier(@RequestBody Supplier supplier) {
         return supplierService.AddSupplier(supplier);
     }
 
     @Override
+    @PreAuthorize("hasAuthority('gp_supplier_get')")
     @GetMapping("/getsupplier/list/{page}/{size}")
     public QueryResponseResult getSupplierList(@PathVariable("page") int page,
                                                @PathVariable("size") int size) {
@@ -42,12 +45,14 @@ public class SupplierController implements SupplierControllerApi {
     }
 
     @Override
+    @PreAuthorize("hasAuthority('gp_supplier_update')")
     @PutMapping("/editsupplier")
     public ResponseResult alterSupplier(@RequestBody Supplier supplier) {
         return supplierService.alterSupplier(supplier);
     }
 
     @Override
+    @PreAuthorize("hasAuthority('gp_supplier_delete')")
     @DeleteMapping("/delete")
     public ResponseResult deleteSupplier(@RequestParam("ids") String ids) {
         //ids 规则： id1,id2,id3

@@ -15,12 +15,12 @@ import java.io.Serializable;
  */
 @Configuration
 public class AliDevPayConfig implements Serializable {
-    //页面跳转同步通知页面路径 需http://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
+
 // 这个是支付完成后的请求
-    public static String returnUrl = "http://3111h4q179.zicp.vip/alipay/return";
+    public static String returnUrl = "http://www.graduation.com/#/addIncoming";
     //服务器异步通知页面路径  需http://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
 // 这个是支付成功失败以后的通知接口会返回相应的参数
-    public static String notifyUrl = "http://3111h4q179.zicp.vip/alipay/notify";
+    public static String notifyUrl = "http://3111h4q179.zicp.vip/cms/alipay/notify";
 
     /**支付宝分配给开发者的应用ID*/
     public static String aliPayAppId = "2016102400752951";

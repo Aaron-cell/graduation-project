@@ -9,6 +9,7 @@ import com.gp.framework.model.response.CommonCode;
 import com.gp.framework.model.response.ResponseResult;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -54,6 +55,7 @@ public class QRCodeController implements QRCodeControllerApi {
     }
 
     @Override
+    @PreAuthorize("hasAuthority('gp_qrcode_analysis')")
     @GetMapping("/analysis/qrcode")
     @ResponseBody
     public ResponseResult analysisQRCode() {
@@ -67,6 +69,7 @@ public class QRCodeController implements QRCodeControllerApi {
     }
 
     @Override
+    @PreAuthorize("hasAuthority('gp_records_get')")
     @GetMapping("/records/{id}")
     @ResponseBody
     public UserPunch getRecords(@PathVariable("id") String id) {

@@ -96,7 +96,7 @@ public class EmailService {
         System.out.println("今天已执行");
         List<User> all = userRepository.findAll();
         Date date = new Date();
-        String str = "yyy-MM-dd";
+        String str = "yyyy-MM-dd";
         SimpleDateFormat format = new SimpleDateFormat(str);
         String stringFormat = format.format(date);//2020-03-27
         String substring = stringFormat.substring(0, 4);//2020

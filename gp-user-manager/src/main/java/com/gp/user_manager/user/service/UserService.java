@@ -15,12 +15,16 @@ import com.gp.user_manager.user.client.CmsClient;
 import com.gp.user_manager.user.client.FileSystemClient;
 import com.gp.user_manager.user.dao.*;
 import gp.framework.utils.BCryptUtil;
+import gp.framework.utils.CookieUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
+import javax.servlet.http.HttpServletResponse;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -98,6 +102,8 @@ public class UserService {
         user.setCreateTime(new Date());
         user.setUpdateTime(new Date());
         User save = userRepository.save(user);
+        //删除cookie
+        this.deleteCodeCookie(save.getPhone());
         ResponseResult responseResult = this.addUserRole(save.getId(), userRegister);
         return responseResult;
     }
@@ -246,12 +252,21 @@ public class UserService {
         userRepository.deleteById(user.getId());
         return new ResponseResult(CommonCode.SUCCESS);
     }
-
+    /**
+     * 删除cookie
+     */
+    private void deleteCodeCookie(String phone){
+        HttpServletResponse response = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getResponse();
+        //addCookie(HttpServletResponse response,String domain,String path, String name,
+        //                                 String value, int maxAge,boolean httpOnly)
+        CookieUtil.addCookie(response,"graduation.com","/",phone,"",0,false);
+    }
     /**
      * 重置密码
      * @param userReset
      * @return
      */
+    @Transactional
     public ResponseResult resetPassword(UserReset userReset) {
         //根据电话号码查询用户
         User user = userRepository.findByPhone(userReset.getPhone());
@@ -267,6 +282,78 @@ public class UserService {
         userRepository.save(user);
         //远程调用cms
         ResponseResult responseResult = cmsClient.SendPassword(user.getPhone(), password);
+        this.deleteCodeCookie(user.getPhone());//删除验证码cookie
         return responseResult;
+    }
+
+    /**
+     * 根据用户id查询用户信息
+     * @param id
+     * @return
+     */
+    @Transactional
+    public UserInformation findUserListById(String id) {
+        if(StringUtils.isEmpty(id)){
+            ExceptionCast.cast(CommonCode.INVALID_PARAM);
+        }
+        //实例化UserInformation
+        UserInformation userInformation = new UserInformation();
+        Optional<User> byId = userRepository.findById(id);
+        if(!byId.isPresent()){
+            ExceptionCast.cast(CommonCode.INVALID_PARAM);
+        }
+        User user = byId.get();
+        //查询用户-角色关联表
+        UserRole userRole = this.findUserRoleByUserId(id);
+        //查询角色表
+        Role role = this.findRoleById(userRole.getRoleId());
+        BeanUtils.copyProperties(user,userInformation);
+        userInformation.setCreator(userRole.getCreator());
+        userInformation.setRoleId(userRole.getRoleId());
+        userInformation.setRolename(role.getRoleName());
+        return userInformation;
+    }
+
+    /**
+     * 修改用户信息
+     * @param user
+     * @return
+     */
+    @Transactional
+    public ResponseResult editUserInformation(User user) {
+        if(user == null || StringUtils.isEmpty(user.getId())){
+            ExceptionCast.cast(CommonCode.INVALID_PARAM);
+        }
+        user.setUpdateTime(new Date());
+        userRepository.save(user);
+        return new ResponseResult(CommonCode.SUCCESS);
+    }
+
+    /**
+     * 修改用户密码
+     * @param passwordExt
+     * @return
+     */
+    public ResponseResult editPassword(PasswordExt passwordExt) {
+        if(passwordExt == null || StringUtils.isEmpty(passwordExt.getId())){
+            ExceptionCast.cast(CommonCode.INVALID_PARAM);
+        }
+        if (!passwordExt.getFirstpassword().equals(passwordExt.getSecondpassword())){
+            ExceptionCast.cast(UserCode.PASSWORD_INCONSISTENCY);
+        }
+        Optional<User> byId = userRepository.findById(passwordExt.getId());
+        if(!byId.isPresent()){
+            ExceptionCast.cast(CommonCode.INVALID_PARAM);
+        }
+        User user = byId.get();
+        boolean matches = BCryptUtil.matches(passwordExt.getPassword(), user.getPassword());
+        if(matches){
+            //密码匹配
+            String encode = BCryptUtil.encode(passwordExt.getFirstpassword());
+            user.setPassword(encode);
+            userRepository.save(user);
+            return new ResponseResult(CommonCode.SUCCESS);
+        }
+        return new ResponseResult(UserCode.ORIGINAL_PASSWORD_ERROR);
     }
 }

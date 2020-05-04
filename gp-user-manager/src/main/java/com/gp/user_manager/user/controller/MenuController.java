@@ -7,6 +7,7 @@ import com.gp.framework.domain.user.request.MenuRequest;
 import com.gp.framework.model.response.QueryResponseResult;
 import com.gp.user_manager.user.service.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +27,7 @@ public class MenuController implements MenuControllerApi {
     @Autowired
     private MenuService menuService;
     @Override
+    @PreAuthorize("hasAuthority('gp_menu_get')")
     @GetMapping("/get/list/{page}/{size}")
     public QueryResponseResult<Menu> getMenuList(@PathVariable("page") int page,
                                                        @PathVariable("size") int size,

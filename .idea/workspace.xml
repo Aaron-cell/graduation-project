@@ -1,7 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d2724b5-3873-4624-b6fb-36e48b1dc409" name="Default Changelist" comment="" />
+    <list default="true" id="3d2724b5-3873-4624-b6fb-36e48b1dc409" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/config/ResourceServerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/dao/OrderCollectionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/dao/SuperRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/dao/UserRoleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/pay/client/OrderClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/user/service/SuperService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-cms-manager/src/main/resources/publickey.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-cms-manager/src/test/java/com/gp/cms_manager/test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-cms-manager/target/classes/com/gp/cms_manager/config/ResourceServerConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-cms-manager/target/classes/com/gp/cms_manager/dao/OrderCollectionRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-cms-manager/target/classes/com/gp/cms_manager/dao/SuperRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-cms-manager/target/classes/com/gp/cms_manager/dao/UserRoleRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-cms-manager/target/classes/com/gp/cms_manager/pay/client/OrderClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-cms-manager/target/classes/com/gp/cms_manager/user/service/SuperService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-cms-manager/target/classes/publickey.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-cms-manager/target/test-classes/com/gp/cms_manager/test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-framework-api/src/main/java/com/gp/api/resources/order/OrderControllerApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-framework-api/src/main/java/com/gp/api/user/SuperControllerApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-framework-api/target/classes/com/gp/api/resources/order/OrderControllerApi.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-framework-api/target/classes/com/gp/api/user/SuperControllerApi.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-framework-model/src/main/java/com/gp/framework/domain/resource/order/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-framework-model/src/main/java/com/gp/framework/domain/resource/order/OrderCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-framework-model/src/main/java/com/gp/framework/domain/resource/order/OrderValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-framework-model/src/main/java/com/gp/framework/domain/resource/order/QueryOrderRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-framework-model/src/main/java/com/gp/framework/domain/user/Super.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-framework-model/src/main/java/com/gp/framework/domain/user/ext/PasswordExt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-framework-model/src/main/java/com/gp/framework/domain/user/ext/UserInformation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-framework-model/target/classes/com/gp/framework/domain/resource/order/Order.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-framework-model/target/classes/com/gp/framework/domain/resource/order/OrderCollection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-framework-model/target/classes/com/gp/framework/domain/resource/order/OrderValue.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-framework-model/target/classes/com/gp/framework/domain/resource/order/QueryOrderRequest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-framework-model/target/classes/com/gp/framework/domain/user/Super.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-framework-model/target/classes/com/gp/framework/domain/user/ext/PasswordExt.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-framework-model/target/classes/com/gp/framework/domain/user/ext/UserInformation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-resources-manager/src/main/java/com/gp/resources_manager/config/ResourceServerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-resources-manager/src/main/java/com/gp/resources_manager/resources/order/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-resources-manager/src/main/java/com/gp/resources_manager/resources/order/dao/OrderCollectionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-resources-manager/src/main/java/com/gp/resources_manager/resources/order/dao/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-resources-manager/src/main/java/com/gp/resources_manager/resources/order/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-resources-manager/src/main/resources/publickey.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-resources-manager/target/classes/com/gp/resources_manager/config/ResourceServerConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-resources-manager/target/classes/com/gp/resources_manager/resources/order/controller/OrderController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-resources-manager/target/classes/com/gp/resources_manager/resources/order/dao/OrderCollectionRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-resources-manager/target/classes/com/gp/resources_manager/resources/order/dao/OrderRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-resources-manager/target/classes/com/gp/resources_manager/resources/order/service/OrderService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-resources-manager/target/classes/publickey.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-user-manager/src/main/java/com/gp/user_manager/user/config/ResourceServerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-user-manager/src/main/java/com/gp/user_manager/user/controller/SuperController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-user-manager/src/main/java/com/gp/user_manager/user/dao/SuperRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-user-manager/src/main/java/com/gp/user_manager/user/service/SuperService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-user-manager/src/main/resources/publickey.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-user-manager/src/test/java/PermissionInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-user-manager/target/classes/com/gp/user_manager/user/config/ResourceServerConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-user-manager/target/classes/com/gp/user_manager/user/controller/SuperController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-user-manager/target/classes/com/gp/user_manager/user/dao/SuperRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-user-manager/target/classes/com/gp/user_manager/user/service/SuperService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-user-manager/target/classes/publickey.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gp-user-manager/target/test-classes/PermissionInit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-cms-manager/gp-cms-manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gp-cms-manager/gp-cms-manager.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-cms-manager/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gp-cms-manager/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/CmsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/CmsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/config/AliDevPayConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/config/AliDevPayConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/dao/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/dao/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/email/controller/EmailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/email/controller/EmailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/email/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/email/service/EmailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/pay/controller/PayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/pay/controller/PayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/pay/service/PayService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/pay/service/PayService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/qrcode/controller/QRCodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/qrcode/controller/QRCodeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/sms/controller/SmsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/sms/controller/SmsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/sms/service/SmsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/sms/service/SmsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-cms-manager/target/classes/com/gp/cms_manager/CmsApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/gp-cms-manager/target/classes/com/gp/cms_manager/CmsApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-cms-manager/target/classes/com/gp/cms_manager/config/AliDevPayConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/gp-cms-manager/target/classes/com/gp/cms_manager/config/AliDevPayConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-cms-manager/target/classes/com/gp/cms_manager/email/controller/EmailController.class" beforeDir="false" afterPath="$PROJECT_DIR$/gp-cms-manager/target/classes/com/gp/cms_manager/email/controller/EmailController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-cms-manager/target/classes/com/gp/cms_manager/email/service/EmailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/gp-cms-manager/target/classes/com/gp/cms_manager/email/service/EmailService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-cms-manager/target/classes/com/gp/cms_manager/pay/controller/PayController.class" beforeDir="false" afterPath="$PROJECT_DIR$/gp-cms-manager/target/classes/com/gp/cms_manager/pay/controller/PayController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-cms-manager/target/classes/com/gp/cms_manager/pay/service/PayService.class" beforeDir="false" afterPath="$PROJECT_DIR$/gp-cms-manager/target/classes/com/gp/cms_manager/pay/service/PayService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-cms-manager/target/classes/com/gp/cms_manager/qrcode/controller/QRCodeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/gp-cms-manager/target/classes/com/gp/cms_manager/qrcode/controller/QRCodeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-cms-manager/target/classes/com/gp/cms_manager/sms/controller/SmsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/gp-cms-manager/target/classes/com/gp/cms_manager/sms/controller/SmsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-cms-manager/target/classes/com/gp/cms_manager/sms/service/SmsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/gp-cms-manager/target/classes/com/gp/cms_manager/sms/service/SmsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-framework-api/src/main/java/com/gp/api/cms/pay/PayControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/gp-framework-api/src/main/java/com/gp/api/cms/pay/PayControllerApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-framework-api/src/main/java/com/gp/api/cms/sms/SmsControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/gp-framework-api/src/main/java/com/gp/api/cms/sms/SmsControllerApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-framework-api/src/main/java/com/gp/api/user/UserControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/gp-framework-api/src/main/java/com/gp/api/user/UserControllerApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-framework-api/target/classes/com/gp/api/cms/pay/PayControllerApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/gp-framework-api/target/classes/com/gp/api/cms/pay/PayControllerApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-framework-api/target/classes/com/gp/api/cms/sms/SmsControllerApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/gp-framework-api/target/classes/com/gp/api/cms/sms/SmsControllerApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-framework-api/target/classes/com/gp/api/user/UserControllerApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/gp-framework-api/target/classes/com/gp/api/user/UserControllerApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-framework-model/src/main/java/com/gp/framework/domain/user/response/UserCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/gp-framework-model/src/main/java/com/gp/framework/domain/user/response/UserCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-framework-model/target/classes/com/gp/framework/domain/user/response/UserCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/gp-framework-model/target/classes/com/gp/framework/domain/user/response/UserCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-resources-manager/gp-resources-manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gp-resources-manager/gp-resources-manager.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-resources-manager/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gp-resources-manager/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-resources-manager/src/main/java/com/gp/resources_manager/resources/employee/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gp-resources-manager/src/main/java/com/gp/resources_manager/resources/employee/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-resources-manager/src/main/java/com/gp/resources_manager/resources/equipment/controller/EquipmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gp-resources-manager/src/main/java/com/gp/resources_manager/resources/equipment/controller/EquipmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-resources-manager/src/main/java/com/gp/resources_manager/resources/supplier/controller/SupplierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gp-resources-manager/src/main/java/com/gp/resources_manager/resources/supplier/controller/SupplierController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-resources-manager/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gp-resources-manager/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-resources-manager/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gp-resources-manager/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-resources-manager/target/classes/com/gp/resources_manager/resources/employee/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/gp-resources-manager/target/classes/com/gp/resources_manager/resources/employee/controller/EmployeeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-resources-manager/target/classes/com/gp/resources_manager/resources/equipment/controller/EquipmentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/gp-resources-manager/target/classes/com/gp/resources_manager/resources/equipment/controller/EquipmentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-resources-manager/target/classes/com/gp/resources_manager/resources/supplier/controller/SupplierController.class" beforeDir="false" afterPath="$PROJECT_DIR$/gp-resources-manager/target/classes/com/gp/resources_manager/resources/supplier/controller/SupplierController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-user-manager/gp-user-manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gp-user-manager/gp-user-manager.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-user-manager/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gp-user-manager/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-user-manager/src/main/java/com/gp/user_manager/user/client/CmsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/gp-user-manager/src/main/java/com/gp/user_manager/user/client/CmsClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-user-manager/src/main/java/com/gp/user_manager/user/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gp-user-manager/src/main/java/com/gp/user_manager/user/controller/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-user-manager/src/main/java/com/gp/user_manager/user/controller/PermissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gp-user-manager/src/main/java/com/gp/user_manager/user/controller/PermissionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-user-manager/src/main/java/com/gp/user_manager/user/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gp-user-manager/src/main/java/com/gp/user_manager/user/controller/RoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-user-manager/src/main/java/com/gp/user_manager/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gp-user-manager/src/main/java/com/gp/user_manager/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-user-manager/src/main/java/com/gp/user_manager/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gp-user-manager/src/main/java/com/gp/user_manager/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-user-manager/target/classes/com/gp/user_manager/user/client/CmsClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/gp-user-manager/target/classes/com/gp/user_manager/user/client/CmsClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-user-manager/target/classes/com/gp/user_manager/user/controller/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/gp-user-manager/target/classes/com/gp/user_manager/user/controller/MenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-user-manager/target/classes/com/gp/user_manager/user/controller/PermissionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/gp-user-manager/target/classes/com/gp/user_manager/user/controller/PermissionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-user-manager/target/classes/com/gp/user_manager/user/controller/RoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/gp-user-manager/target/classes/com/gp/user_manager/user/controller/RoleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-user-manager/target/classes/com/gp/user_manager/user/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/gp-user-manager/target/classes/com/gp/user_manager/user/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp-user-manager/target/classes/com/gp/user_manager/user/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/gp-user-manager/target/classes/com/gp/user_manager/user/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp_rabbitmq_manager/src/main/java/com/gp/mq_manager/sms/service/SmsSendCodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gp_rabbitmq_manager/src/main/java/com/gp/mq_manager/sms/service/SmsSendCodeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gp_rabbitmq_manager/target/classes/com/gp/mq_manager/sms/service/SmsSendCodeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/gp_rabbitmq_manager/target/classes/com/gp/mq_manager/sms/service/SmsSendCodeService.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +151,21 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="gp_resource: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="gp_user@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="gp_user@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="gp_user@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="gp_user: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
     </expand>
     <select />
   </component>
@@ -46,6 +177,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -62,9 +196,10 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/F2FPay_Demo_Java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/gp-cms-manager/src/main/resources" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -73,18 +208,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\java\IDEA\graduation-project\gp-cms-manager\src\main\resources" />
+      <recent name="F:\java\IDEA\graduation-project\gp-user-manager\src\main\resources" />
+      <recent name="F:\java\IDEA\graduation-project\gp-resources-manager\src\main\resources" />
       <recent name="F:\java\IDEA\graduation-project\gp-user-manager\src\main\resources\mapper" />
       <recent name="F:\java\IDEA\graduation-project\gp_rabbitmq_manager\src\main\resources" />
-      <recent name="F:\java\IDEA\graduation-project\gp-cms-manager\src\main\resources" />
-      <recent name="F:\java\IDEA\graduation-project\gp-fileSystem-manager\src\main\resources" />
-      <recent name="F:\java\IDEA\graduation-project\gp-framework-model\src\main\java\com\gp\framework\domain\auth\response" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.gp.framework.domain.user.request" />
-      <recent name="com.gp.user_manager.user.dao" />
-      <recent name="com.gp.cms_manager.dao" />
+      <recent name="" />
       <recent name="com.gp.cms_manager.config" />
-      <recent name="com.gp.mq_manager.email.dao" />
+      <recent name="com.gp.user_manager.user.config" />
+      <recent name="com.gp.resources_manager.config" />
+      <recent name="com.gp.resources_manager.resources.order.dao" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\java\IDEA\graduation-project\gp-resources-manager\src\main\resources\mapper" />
@@ -106,21 +241,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.alipay.demo.trade.Main" />
-      <module name="TradePayDemo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.alipay.demo.trade.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+  <component name="RunManager" selected="Spring Boot.CmsApplication">
+    <configuration name="getPublicKey" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="getPublicKey" />
+      <module name="gp-security-oauth2" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QRCodeTest.QRCodeAnalysis" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.gp.cms_manager.test" />
       <module name="gp-cms-manager" />
       <extension name="coverage">
         <pattern>
@@ -128,25 +258,15 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.gp.cms_manager" />
-      <option name="MAIN_CLASS_NAME" value="com.gp.cms_manager.QRCodeTest" />
-      <option name="METHOD_NAME" value="QRCodeAnalysis" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QRCodeTest.deleteUser_punch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gp-cms-manager" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.gp.cms_manager.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.gp.cms_manager" />
-      <option name="MAIN_CLASS_NAME" value="com.gp.cms_manager.QRCodeTest" />
-      <option name="METHOD_NAME" value="deleteUser_punch" />
+    <configuration name="PermissionInit.permissioninit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gp-user-manager" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PermissionInit" />
+      <option name="METHOD_NAME" value="permissioninit" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -236,8 +356,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.QRCodeTest.QRCodeAnalysis" />
-      <item itemvalue="JUnit.QRCodeTest.deleteUser_punch" />
+      <item itemvalue="Application.test" />
       <item itemvalue="Spring Boot.Eureka02" />
       <item itemvalue="Spring Boot.Eureka01" />
       <item itemvalue="Spring Boot.manageResourcesApplication" />
@@ -246,15 +365,16 @@
       <item itemvalue="Spring Boot.FileSystemApplication" />
       <item itemvalue="Spring Boot.manageUserApplication" />
       <item itemvalue="Spring Boot.RabbitMQApplication" />
-      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.getPublicKey" />
+      <item itemvalue="JUnit.PermissionInit.permissioninit" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Spring Boot.RabbitMQApplication" />
         <item itemvalue="Spring Boot.manageUserApplication" />
-        <item itemvalue="JUnit.QRCodeTest.deleteUser_punch" />
-        <item itemvalue="JUnit.QRCodeTest.QRCodeAnalysis" />
+        <item itemvalue="JUnit.PermissionInit.permissioninit" />
+        <item itemvalue="Application.getPublicKey" />
+        <item itemvalue="Spring Boot.RabbitMQApplication" />
+        <item itemvalue="Application.test" />
       </list>
     </recent_temporary>
   </component>
@@ -292,12 +412,26 @@
       <workItem from="1586862732816" duration="11289000" />
       <workItem from="1587626113476" duration="12294000" />
       <workItem from="1587652606743" duration="1630000" />
-      <workItem from="1587950443505" duration="13601000" />
+      <workItem from="1587950443505" duration="38830000" />
+      <workItem from="1588147610813" duration="58445000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -313,14 +447,14 @@
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/gp-user-manager/src/main/java/com/gp/user_manager/user/service/UserService.java</url>
-          <line>261</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/gp_rabbitmq_manager/src/test/java/emailTest.java</url>
           <line>28</line>
           <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/gp-cms-manager/src/main/java/com/gp/cms_manager/sms/service/SmsService.java</url>
+          <line>109</line>
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

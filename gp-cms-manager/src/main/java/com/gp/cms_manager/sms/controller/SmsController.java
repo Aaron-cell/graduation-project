@@ -50,4 +50,12 @@ public class SmsController implements SmsControllerApi {
         return smsService.sendPassword(phone,password);
     }
 
+    @Override
+    @GetMapping("/verify/{phone}")
+    public ResponseResult VerifyPhone(@PathVariable("phone") String phone) {
+        //随机生成6位数
+        int newNum = (int)((Math.random()*9+1)*100000);
+        return smsService.verifyPhone(phone,String.valueOf(newNum));
+    }
+
 }

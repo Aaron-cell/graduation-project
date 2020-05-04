@@ -14,4 +14,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface UserRepository extends JpaRepository<User,String> {
     //根据电话号码查询
     public User findByPhone(String phone);
+    //根据
 }

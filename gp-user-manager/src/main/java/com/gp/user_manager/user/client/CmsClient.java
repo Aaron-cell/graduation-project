@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(value = gpServiceList.GP_CMS_MANAGER)
 public interface CmsClient {
     //发送密码到手机
-    @GetMapping("/cms/sms//send/password/{phone}/{password}")
+    @GetMapping("/cms/sms/send/password/{phone}/{password}")
     public ResponseResult SendPassword(@PathVariable("phone") String phone,
                                        @PathVariable("password") String password);
 }

@@ -1,16 +1,15 @@
 package com.gp.cms_manager.pay.controller;
 
+import com.alipay.api.AlipayApiException;
 import com.gp.api.cms.pay.PayControllerApi;
 import com.gp.cms_manager.pay.service.PayService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 
 /**
  * @author 码农界的小学生
@@ -20,7 +19,7 @@ import java.io.IOException;
  * @description: TODO
  * @date 2020/4/23 21:39
  */
-@RequestMapping("/alipay")
+@RequestMapping("/cms/alipay")
 @RestController
 public class PayController implements PayControllerApi {
     @Autowired
@@ -28,23 +27,15 @@ public class PayController implements PayControllerApi {
 
     @Override
     @RequestMapping(value = "/pay")
-    public void aliPay(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html;charset=utf-8");
-        response.getWriter().write(payService.aliPay());
-        response.getWriter().flush();
-        response.getWriter().close();
+    public String aliPay(@RequestParam("id")String id,
+                         @RequestParam("type")String type,@RequestParam("money")String money) throws IOException {
+        return payService.aliPay(id,type,money);
     }
 
     @Override
     @RequestMapping ("/notify")
-    public String payNotice(HttpServletRequest request) {
-        return payService.alipayNotify(request);
+    public void payNotice(HttpServletRequest request,HttpServletResponse response) throws Exception {
+         payService.alipayNotify(request,response);
     }
 
-    @Override
-    @RequestMapping("/return")
-    public String payReturn(HttpServletRequest request) {
-        System.out.println("PayController.payReturn");
-        return null;
-    }
 }

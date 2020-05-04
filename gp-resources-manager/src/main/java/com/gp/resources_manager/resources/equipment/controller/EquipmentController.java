@@ -7,6 +7,7 @@ import com.gp.framework.model.response.QueryResponseResult;
 import com.gp.framework.model.response.ResponseResult;
 import com.gp.resources_manager.resources.equipment.service.EquipmentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -24,6 +25,7 @@ public class EquipmentController implements EquipmentControllerApi {
     private EquipmentService equipmentService;
 
     @Override
+    @PreAuthorize("hasAuthority('gp_equipment_get')")
     @GetMapping("/getequipment/list/{page}/{size}")
     public QueryResponseResult getEquipmentList(@PathVariable("page") int page, @PathVariable("size") int size, EquipmentQueryRequest equipmentQueryRequest) {
         if(page <= 0){
@@ -37,18 +39,21 @@ public class EquipmentController implements EquipmentControllerApi {
     }
 
     @Override
+    @PreAuthorize("hasAuthority('gp_equipment_add')")
     @PostMapping("/addequipment")
     public ResponseResult addEquipment(@RequestBody Equipment equipment) {
         return equipmentService.addEquipment(equipment);
     }
 
     @Override
+    @PreAuthorize("hasAuthority('gp_equipment_delete')")
     @DeleteMapping("/delete")
     public ResponseResult deleteEquipment(@RequestParam("ids") String ids) {
         return equipmentService.deleteEquipment(ids);
     }
 
     @Override
+    @PreAuthorize("hasAuthority('gp_equipment_update')")
     @PutMapping("/editequipment")
     public ResponseResult editEquipment(@RequestBody Equipment equipment) {
         return equipmentService.editEquipment(equipment);

@@ -16,6 +16,11 @@ import io.swagger.annotations.ApiOperation;
 public interface SmsControllerApi {
     @ApiOperation("重置密码根据电话号码发送验证码")
     public ResponseResult SendMessage(String phone);
+
     @ApiOperation("重置密码成功后发送密码到手机")
     public ResponseResult SendPassword(String phone,String password);
+
+    @ApiOperation("根据电话号码验证数据库中是否存在，发送验证码")
+    public ResponseResult VerifyPhone(String phone);
+
 }

@@ -8,6 +8,7 @@ import com.gp.framework.model.response.QueryResponseResult;
 import com.gp.framework.model.response.ResponseResult;
 import com.gp.user_manager.user.service.PermissionService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -26,11 +27,13 @@ public class PermissionController implements PermissionControllerApi {
 
     @Override
     @GetMapping("add/{id}")
+    @PreAuthorize("hasAuthority('gp_permission_add')")
     public ResponseResult addPermission(@PathVariable("id") Integer menuId) {
         return permissionService.addPermission(menuId);
     }
 
     @Override
+    @PreAuthorize("hasAuthority('gp_permission_get')")
     @GetMapping("/get/list/{page}/{size}")
     public QueryResponseResult<PermissionAndMenu> getPermissionList(@PathVariable("page") int page,
                                                                     @PathVariable("size") int size, PermissionRequest permissionRequest) {
@@ -44,6 +47,7 @@ public class PermissionController implements PermissionControllerApi {
     }
 
     @Override
+    @PreAuthorize("hasAuthority('gp_permission_delete')")
     @DeleteMapping("/del/{id}")
     public ResponseResult deletePermission(@PathVariable("id") String id) {
         return permissionService.deletePermission(id);

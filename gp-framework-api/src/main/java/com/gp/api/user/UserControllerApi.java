@@ -1,5 +1,7 @@
 package com.gp.api.user;
 
+import com.gp.framework.domain.user.Super;
+import com.gp.framework.domain.user.User;
 import com.gp.framework.domain.user.ext.*;
 import com.gp.framework.domain.user.request.QueryUserAndRoleRequest;
 import com.gp.framework.model.response.QueryResponseResult;
@@ -31,4 +33,14 @@ public interface UserControllerApi {
 
     @ApiOperation("重置密码")
     public ResponseResult ResetPassword(UserReset userReset);
+
+    @ApiOperation("根据用户id查询用户个人信息")
+    public UserInformation findUserListById(String id);
+
+    @ApiOperation("修改用户个人信息")
+    public ResponseResult editUserInformation(User user);
+
+    @ApiOperation("修改密码")
+    public ResponseResult editPassword(PasswordExt passwordExt);
+
 }

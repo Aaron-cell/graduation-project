@@ -6,6 +6,7 @@ import com.gp.framework.domain.cms.email.BirthTemplet;
 import com.gp.framework.model.response.QueryResponseResult;
 import com.gp.framework.model.response.ResponseResult;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -23,6 +24,7 @@ public class EmailController implements EmailControllerApi {
     private EmailService emailService;
 
     @Override
+    @PreAuthorize("hasAuthority('gp_templet_get')")
     @GetMapping("/birth/templet")
     public QueryResponseResult<BirthTemplet> findListBirthTemplet() {
         return emailService.findListBirthTemplet();
@@ -30,6 +32,7 @@ public class EmailController implements EmailControllerApi {
 
     @Override
     @PutMapping("/edit/templet")
+    @PreAuthorize("hasAuthority('gp_templet_update')")
     public ResponseResult editBirthTemplet(@RequestBody BirthTemplet birthTemplet) {
         return emailService.editBirthTemplet(birthTemplet);
     }

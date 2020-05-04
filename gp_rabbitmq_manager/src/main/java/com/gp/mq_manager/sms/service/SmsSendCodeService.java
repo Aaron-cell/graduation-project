@@ -38,6 +38,7 @@ public class SmsSendCodeService {
             SmsSingleSender ssender = new SmsSingleSender(appid, appkey);
             SmsSingleSenderResult result = ssender.sendWithParam("86", phone,
                     templateId,list, smsSign, "", "");
+            System.out.println("验证码码为："+code);
             System.out.println(result);
         } catch (HTTPException e) {
             // HTTP 响应码错误
@@ -65,6 +66,7 @@ public class SmsSendCodeService {
             SmsSingleSender ssender = new SmsSingleSender(appid, appkey);
             SmsSingleSenderResult result = ssender.sendWithParam("86", phone,
                     templateId,list, smsSign, "", "");
+            System.out.println("重置密码为："+password);
             System.out.println(result);
         } catch (HTTPException e) {
             // HTTP 响应码错误

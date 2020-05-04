@@ -6,6 +6,7 @@ import io.swagger.annotations.ApiOperation;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 
 /**
  * @author 码农界的小学生
@@ -19,11 +20,9 @@ import java.io.IOException;
 public interface PayControllerApi {
 
     @ApiOperation("调用支付宝充值接口")
-    public void aliPay(HttpServletRequest request, HttpServletResponse response) throws IOException;
+    public String aliPay(String id,String type,String money) throws IOException;
 
     @ApiOperation("[支付宝专用]支付宝充值接口异步回调接口")
-    public String payNotice(HttpServletRequest request);
+    public void payNotice(HttpServletRequest request,HttpServletResponse response) throws Exception;
 
-    @ApiOperation("[支付宝专用]支付宝充值接口同步回调接口")
-    public String payReturn(HttpServletRequest request);
 }

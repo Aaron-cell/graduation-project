@@ -1,6 +1,8 @@
 package com.gp.user_manager.user.controller;
 
 import com.gp.api.user.UserControllerApi;
+import com.gp.framework.domain.user.Super;
+import com.gp.framework.domain.user.User;
 import com.gp.framework.domain.user.ext.*;
 import com.gp.framework.domain.user.request.QueryUserAndRoleRequest;
 import com.gp.framework.domain.user.response.UserCode;
@@ -10,6 +12,7 @@ import com.gp.user_manager.user.service.UserService;
 import gp.framework.utils.CookieUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.util.Base64Utils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.RequestContextHolder;
@@ -44,6 +47,7 @@ public class UserController implements UserControllerApi {
     }
 
     @Override
+    @PreAuthorize("hasAuthority('gp_user_list')")
     @GetMapping("/user/list/{page}/{size}")
     public QueryResponseResult<UserList> findUserAndRoleList(@PathVariable("page") int page,
                                                              @PathVariable("size") int size,
@@ -59,6 +63,7 @@ public class UserController implements UserControllerApi {
 
     @Override
     @DeleteMapping("/delete/{id}")
+    @PreAuthorize("hasAuthority('gp_user_delete')")
     public ResponseResult deleteUserAndRole(@PathVariable("id") String userId) {
         return userService.deleteUserAndRole(userId);
     }
@@ -77,6 +82,24 @@ public class UserController implements UserControllerApi {
             return userService.resetPassword(userReset);
         }
         return new ResponseResult(UserCode.CODE_ERROR);
+    }
+
+    @Override
+    @GetMapping("/get/{id}")
+    public UserInformation findUserListById(@PathVariable("id") String id) {
+        return userService.findUserListById(id);
+    }
+
+    @Override
+    @PutMapping("/edit/user")
+    public ResponseResult editUserInformation(@RequestBody User user) {
+        return userService.editUserInformation(user);
+    }
+
+    @Override
+    @PutMapping("/edit/password")
+    public ResponseResult editPassword(@RequestBody PasswordExt passwordExt) {
+        return userService.editPassword(passwordExt);
     }
 
     /**
